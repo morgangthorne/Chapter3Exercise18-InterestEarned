@@ -1,20 +1,56 @@
-// Chapter3Exercise18-InterestEarned.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+File Name: Chapter3Exercise18-InterestEarned.cpp
+Programmer: Morgan Thorne
+Date: February 2025
+Requirements:
+Write a program that asks for the principal, the interest rate, and the
+number of times the interest is compunded. It should display a report
+similar to:
+Interest Rare: 4.25%
+Times Compounded: 12
+Principal: $1000.00
+Interest: $43.34
+Amount in Savings: $1043.34
+*/
 
 #include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	/*double interestrate = 0;
+	double timescompounded = 0;
+	double pow1 = 1 + interestrate/timescompounded;
+	double principal = 0;
+	double amount = principal * pow(pow1,timescompounded);
+
+	cout << "What is the prinicpal of your savings account?: ";
+	cin >> principal;*/
+	
+	cout << fixed<<setprecision(2)<<"Input your interest rate: ";
+	double interest_rate = 0;
+	cin >> interest_rate; 
+	interest_rate = interest_rate / 100;
+	cout << "Input the times your interest will compound: ";
+	double compound = 0;
+	cin >> compound;
+	cout << "Input your principal: $";
+	double principal = 0;
+	cin >> principal;
+	double inner = 1 + (interest_rate / compound);
+	double amount = principal * (pow(inner, compound));
+	cout << "Your total amount in savings is $" << amount;
+
+
+
+
+
+
+
+
+	
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
