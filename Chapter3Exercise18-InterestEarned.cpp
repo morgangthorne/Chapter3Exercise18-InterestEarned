@@ -20,14 +20,6 @@ using namespace std;
 
 int main()
 {
-	/*double interestrate = 0;
-	double timescompounded = 0;
-	double pow1 = 1 + interestrate/timescompounded;
-	double principal = 0;
-	double amount = principal * pow(pow1,timescompounded);
-
-	cout << "What is the prinicpal of your savings account?: ";
-	cin >> principal;*/
 	
 	cout << fixed<<setprecision(2)<<"Input your interest rate: ";
 	double interest_rate = 0;
